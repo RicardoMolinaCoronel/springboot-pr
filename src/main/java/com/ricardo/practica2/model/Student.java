@@ -17,8 +17,7 @@ public class Student {
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable( name = "students_courses",
             joinColumns = @JoinColumn(name = "student_id"),
-            inverseJoinColumns = @JoinColumn(name = "course_id")
-    )
+            inverseJoinColumns = @JoinColumn(name = "course_id"))
     private Set<Course> courses;
 
     public Integer getId() {
@@ -44,4 +43,5 @@ public class Student {
     public void setCourses(Set<Course> courses) {
         this.courses = courses;
     }
+
 }
