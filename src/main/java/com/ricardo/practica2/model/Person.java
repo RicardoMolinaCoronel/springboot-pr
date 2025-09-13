@@ -17,7 +17,7 @@ public class Person {
 
     private Integer age;
 
-    @OneToMany(mappedBy = "person", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "person", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Device> devices;
 
     public Integer getId() {

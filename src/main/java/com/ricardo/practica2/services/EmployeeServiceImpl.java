@@ -1,9 +1,6 @@
 package com.ricardo.practica2.services;
 
-import com.ricardo.practica2.model.Course;
-import com.ricardo.practica2.model.Employee;
-import com.ricardo.practica2.model.Person;
-import com.ricardo.practica2.model.Student;
+import com.ricardo.practica2.model.*;
 import com.ricardo.practica2.repository.EmployeeRepository;
 import com.ricardo.practica2.repository.PersonRepository;
 import com.ricardo.practica2.repository.StudentRepository;
@@ -18,13 +15,11 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     private EmployeeRepository employeeRepository;
     private PersonRepository personRepository;
-    private StudentRepository studentRepository;
 
     @Autowired
     public EmployeeServiceImpl(EmployeeRepository employeeRepository, PersonRepository personRepository, StudentRepository studentRepository) {
         this.employeeRepository = employeeRepository;
         this.personRepository = personRepository;
-        this.studentRepository = studentRepository;
     }
 
     public Employee getEmployeeById(Integer id){
@@ -56,6 +51,16 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
 
+    public List<Device> getAllDevicesById(Integer id){
+
+        Person person = personRepository.findById(id).orElse(null);
+        if (person != null){
+            return person.getDevices();
+        }else {
+            return null;
+        }
+
+    }
 
 
 

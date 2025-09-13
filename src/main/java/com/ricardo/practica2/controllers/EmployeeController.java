@@ -1,5 +1,6 @@
 package com.ricardo.practica2.controllers;
 
+import com.ricardo.practica2.model.Device;
 import com.ricardo.practica2.model.Employee;
 import com.ricardo.practica2.other.examples.ProductDao;
 import com.ricardo.practica2.services.EmployeeService;
@@ -53,8 +54,10 @@ public class EmployeeController {
     }
 
 
-
-
+    @GetMapping("/findDevicesById/{id}")
+    public List<Device> findDevicesById(@PathVariable Integer id){
+        return employeeService.getAllDevicesById(id);
+    }
 
 
 
