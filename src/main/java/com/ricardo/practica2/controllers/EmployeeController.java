@@ -5,6 +5,7 @@ import com.ricardo.practica2.model.Employee;
 import com.ricardo.practica2.other.examples.ProductDao;
 import com.ricardo.practica2.services.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
@@ -58,6 +59,13 @@ public class EmployeeController {
     public List<Device> findDevicesById(@PathVariable Integer id){
         return employeeService.getAllDevicesById(id);
     }
+
+    @GetMapping("/findByName")
+    public List<Employee> findByName(@RequestParam("name") String name){
+        return employeeService.findEmployeesByName(name);
+    }
+
+
 
 
 

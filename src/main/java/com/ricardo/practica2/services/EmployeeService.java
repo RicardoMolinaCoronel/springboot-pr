@@ -14,6 +14,7 @@ public interface EmployeeService {
     Employee addEmployee(Employee employee);
     Employee updateEmployee(Integer id, Employee employee);
     void deleteEmployee(Integer id);
+    List<Employee> findEmployeesByName(String name);
 
     List<Device> getAllDevicesById(Integer id);
 

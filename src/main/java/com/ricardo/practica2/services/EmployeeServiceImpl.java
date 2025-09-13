@@ -5,6 +5,8 @@ import com.ricardo.practica2.repository.EmployeeRepository;
 import com.ricardo.practica2.repository.PersonRepository;
 import com.ricardo.practica2.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -50,6 +52,9 @@ public class EmployeeServiceImpl implements EmployeeService {
         employeeRepository.deleteById(id);
     }
 
+    public List<Employee> findEmployeesByName(String name){
+        return employeeRepository.findByName(name);
+    }
 
     public List<Device> getAllDevicesById(Integer id){
 
