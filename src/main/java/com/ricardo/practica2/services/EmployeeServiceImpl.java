@@ -1,6 +1,7 @@
 package com.ricardo.practica2.services;
 
 import com.ricardo.practica2.model.*;
+import com.ricardo.practica2.other.EmployeeNotFoundException;
 import com.ricardo.practica2.repository.EmployeeRepository;
 import com.ricardo.practica2.repository.PersonRepository;
 import com.ricardo.practica2.repository.StudentRepository;
@@ -44,7 +45,7 @@ public class EmployeeServiceImpl implements EmployeeService {
                 currentEmployee.setHireDate(employee.getHireDate());
                 return employeeRepository.save(currentEmployee);
             } else {
-                return null;
+                throw new EmployeeNotFoundException("Employee not found");
             }
     }
 
