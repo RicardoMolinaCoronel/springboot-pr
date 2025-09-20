@@ -1,11 +1,15 @@
 package com.ricardo.practica2.controllers;
 
+import com.ricardo.practica2.exception.EmployeeNotFoundException;
+import com.ricardo.practica2.exception.ErrorResponse;
 import com.ricardo.practica2.model.Device;
 import com.ricardo.practica2.model.Employee;
 import com.ricardo.practica2.other.examples.ProductDao;
 import com.ricardo.practica2.services.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
@@ -63,6 +67,12 @@ public class EmployeeController {
     @GetMapping("/findByName")
     public List<Employee> findByName(@RequestParam("name") String name){
         return employeeService.findEmployeesByName(name);
+    }
+
+
+   @ExceptionHandler(EmployeeNotFoundException.class)
+    public ResponseEntity<ErrorResponse> handleEmployeeNotFoundException(EmployeeNotFoundException ex) {
+        return new ResponseEntity<>(new ErrorResponse("EMPLOYEE_NOT_FOUND", ex.getMessage()), HttpStatus.NOT_FOUND);
     }
 
 

@@ -1,9 +1,12 @@
 package com.ricardo.practica2.services;
 
+import com.ricardo.practica2.exception.EmployeeNotFoundException;
+import com.ricardo.practica2.exception.UserNotFoundException;
 import com.ricardo.practica2.model.*;
 import com.ricardo.practica2.repository.EmployeeRepository;
 import com.ricardo.practica2.repository.PersonRepository;
 import com.ricardo.practica2.repository.StudentRepository;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -32,7 +35,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         return employeeRepository.findAll();
     }
 
-    public Employee addEmployee(Employee employee){
+    public Employee addEmployee(@Valid Employee employee){
         return employeeRepository.save(employee);
     }
 
@@ -62,7 +65,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         if (person != null){
             return person.getDevices();
         }else {
-            return null;
+            throw new EmployeeNotFoundException("Employee not found");
         }
 
     }

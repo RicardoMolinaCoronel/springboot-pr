@@ -1,6 +1,10 @@
 package com.ricardo.practica2.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 import java.sql.Date;
 
@@ -12,8 +16,11 @@ public class Employee {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @NotBlank(message = "You need a name")
+    @Size(min = 3, max = 50, message = "The size is too long or too short")
     private String name;
 
+    @Email(message = "The email must not be blank")
     private String email;
 
     private Date hireDate;
