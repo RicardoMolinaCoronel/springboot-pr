@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("other")
+@RequestMapping("/v1/other")
 public class HelloController {
 
     public HelloController() {
@@ -16,7 +16,7 @@ public class HelloController {
     }
 
     @PreAuthorize("hasRole('ADMIN') or hasRole('USER')")
-    @GetMapping("/hello")
+    @GetMapping(value = "/hello", headers = "X-API-VERSION=1")
     public String hello(){
         return "Hello authenticated user!";
     }
