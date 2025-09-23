@@ -25,11 +25,19 @@ public class JwtAuthFilter extends OncePerRequestFilter {
 
     @Autowired
     public JwtAuthFilter(JwtUtils jwtUtils) {
+
         this.jwtUtils = jwtUtils;
+    }
+
+
+    @Override
+    protected boolean shouldNotFilter(HttpServletRequest request){
+        return request.getServletPath().startsWith("/auth");
     }
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
+       System.out.println("loginnn");
         String authHeader = request.getHeader("Authorization");
         if (authHeader != null && authHeader.startsWith("Bearer ")) {
             String jwt =  authHeader.substring(7);

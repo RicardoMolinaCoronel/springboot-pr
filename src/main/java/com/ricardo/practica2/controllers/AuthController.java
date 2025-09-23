@@ -33,6 +33,7 @@ public class AuthController {
     @PostMapping("/login")
     public Map<String, String> login(@RequestBody AuthRequest authRequest){
 
+        System.out.println("login");
         Authentication authentication = authenticationManager
                 .authenticate(new UsernamePasswordAuthenticationToken(authRequest.getUsername(), authRequest.getPassword()));
         String token = jwtUtils.generateToken(authRequest.getUsername());
