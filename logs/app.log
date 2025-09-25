@@ -9,3 +9,583 @@
 2025-09-21T19:40:03.601-05:00  INFO 30120 --- [practica2] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-09-21T19:40:03.617-05:00  INFO 30120 --- [practica2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-09-21T19:40:03.635-05:00  INFO 30120 --- [practica2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-23T14:23:26.277-05:00  INFO 2432 --- [practica2] [main] c.r.practica2.Practica2Application       : Starting Practica2Application using Java 21.0.8 with PID 2432 (/Users/delioribas/Desktop/Otros/practica2/target/classes started by delioribas in /Users/delioribas/Desktop/Otros/practica2)
+2025-09-23T14:23:26.278-05:00 DEBUG 2432 --- [practica2] [main] c.r.practica2.Practica2Application       : Running with Spring Boot v3.5.5, Spring v6.2.10
+2025-09-23T14:23:26.278-05:00  INFO 2432 --- [practica2] [main] c.r.practica2.Practica2Application       : No active profile set, falling back to 1 default profile: "default"
+2025-09-23T14:23:26.529-05:00  INFO 2432 --- [practica2] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-23T14:23:26.555-05:00  INFO 2432 --- [practica2] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 4 JPA repository interfaces.
+2025-09-23T14:23:26.705-05:00  INFO 2432 --- [practica2] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-23T14:23:26.710-05:00  INFO 2432 --- [practica2] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-23T14:23:26.710-05:00  INFO 2432 --- [practica2] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-23T14:23:26.722-05:00  INFO 2432 --- [practica2] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-23T14:23:26.722-05:00  INFO 2432 --- [practica2] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 432 ms
+2025-09-23T14:23:26.746-05:00 DEBUG 2432 --- [practica2] [main] c.r.practica2.security.JwtAuthFilter     : Filter 'jwtAuthFilter' configured for use
+2025-09-23T14:23:26.795-05:00  INFO 2432 --- [practica2] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-23T14:23:26.816-05:00  INFO 2432 --- [practica2] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-09-23T14:23:26.830-05:00  INFO 2432 --- [practica2] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-23T14:23:26.914-05:00  INFO 2432 --- [practica2] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-23T14:23:26.924-05:00  INFO 2432 --- [practica2] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-23T14:23:28.278-05:00  WARN 2432 --- [practica2] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1045, SQLState: 28000
+2025-09-23T14:23:28.279-05:00 ERROR 2432 --- [practica2] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Access denied for user 'root'@'localhost' (using password: YES)
+2025-09-23T14:23:28.280-05:00  WARN 2432 --- [practica2] [main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+
+org.hibernate.exception.GenericJDBCException: unable to obtain isolated JDBC connection [Access denied for user 'root'@'localhost' (using password: YES)] [n/a]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:63) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:334) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1442) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1513) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.10.jar:6.2.10]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.10.jar:6.2.10]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.10.jar:6.2.10]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.10.jar:6.2.10]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.5.jar:3.5.5]
+	at com.ricardo.practica2.Practica2Application.main(Practica2Application.java:11) ~[classes/:na]
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-9.4.0.jar:9.4.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.4.0.jar:9.4.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:839) ~[mysql-connector-j-9.4.0.jar:9.4.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:415) ~[mysql-connector-j-9.4.0.jar:9.4.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237) ~[mysql-connector-j-9.4.0.jar:9.4.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.4.0.jar:9.4.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-6.3.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:370) ~[HikariCP-6.3.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:207) ~[HikariCP-6.3.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-6.3.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576) ~[HikariCP-6.3.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97) ~[HikariCP-6.3.2.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-6.3.2.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:485) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	... 35 common frames omitted
+
+2025-09-23T14:23:28.302-05:00  WARN 2432 --- [practica2] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-23T14:23:28.309-05:00  INFO 2432 --- [practica2] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (null)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-23T14:23:28.638-05:00  INFO 2432 --- [practica2] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-23T14:23:28.644-05:00  INFO 2432 --- [practica2] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-23T14:23:29.660-05:00  WARN 2432 --- [practica2] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1045, SQLState: 28000
+2025-09-23T14:23:29.661-05:00 ERROR 2432 --- [practica2] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Access denied for user 'root'@'localhost' (using password: YES)
+2025-09-23T14:23:29.665-05:00 ERROR 2432 --- [practica2] [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution [Access denied for user 'root'@'localhost' (using password: YES)] [n/a]
+2025-09-23T14:23:29.666-05:00  WARN 2432 --- [practica2] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution [Access denied for user 'root'@'localhost' (using password: YES)] [n/a]
+2025-09-23T14:23:29.667-05:00  INFO 2432 --- [practica2] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-09-23T14:23:29.677-05:00  INFO 2432 --- [practica2] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-09-23T14:23:29.683-05:00 ERROR 2432 --- [practica2] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution [Access denied for user 'root'@'localhost' (using password: YES)] [n/a]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.5.jar:3.5.5]
+	at com.ricardo.practica2.Practica2Application.main(Practica2Application.java:11) ~[classes/:na]
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution [Access denied for user 'root'@'localhost' (using password: YES)] [n/a]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:431) ~[spring-orm-6.2.10.jar:6.2.10]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.10.jar:6.2.10]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.10.jar:6.2.10]
+	... 15 common frames omitted
+Caused by: org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution [Access denied for user 'root'@'localhost' (using password: YES)] [n/a]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:63) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:74) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:65) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:570) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:72) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:233) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:112) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:280) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:324) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1517) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.10.jar:6.2.10]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.10.jar:6.2.10]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.10.jar:6.2.10]
+	... 19 common frames omitted
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-9.4.0.jar:9.4.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.4.0.jar:9.4.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:839) ~[mysql-connector-j-9.4.0.jar:9.4.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:415) ~[mysql-connector-j-9.4.0.jar:9.4.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237) ~[mysql-connector-j-9.4.0.jar:9.4.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.4.0.jar:9.4.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-6.3.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:370) ~[HikariCP-6.3.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:207) ~[HikariCP-6.3.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-6.3.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576) ~[HikariCP-6.3.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97) ~[HikariCP-6.3.2.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-6.3.2.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:485) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	... 40 common frames omitted
+
+2025-09-23T14:23:39.649-05:00  INFO 2452 --- [practica2] [main] c.r.practica2.Practica2Application       : Starting Practica2Application using Java 21.0.8 with PID 2452 (/Users/delioribas/Desktop/Otros/practica2/target/classes started by delioribas in /Users/delioribas/Desktop/Otros/practica2)
+2025-09-23T14:23:39.650-05:00 DEBUG 2452 --- [practica2] [main] c.r.practica2.Practica2Application       : Running with Spring Boot v3.5.5, Spring v6.2.10
+2025-09-23T14:23:39.650-05:00  INFO 2452 --- [practica2] [main] c.r.practica2.Practica2Application       : No active profile set, falling back to 1 default profile: "default"
+2025-09-23T14:23:39.884-05:00  INFO 2452 --- [practica2] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-23T14:23:39.911-05:00  INFO 2452 --- [practica2] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 4 JPA repository interfaces.
+2025-09-23T14:23:40.059-05:00  INFO 2452 --- [practica2] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-23T14:23:40.064-05:00  INFO 2452 --- [practica2] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-23T14:23:40.064-05:00  INFO 2452 --- [practica2] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-23T14:23:40.077-05:00  INFO 2452 --- [practica2] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-23T14:23:40.077-05:00  INFO 2452 --- [practica2] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 412 ms
+2025-09-23T14:23:40.099-05:00 DEBUG 2452 --- [practica2] [main] c.r.practica2.security.JwtAuthFilter     : Filter 'jwtAuthFilter' configured for use
+2025-09-23T14:23:40.145-05:00  INFO 2452 --- [practica2] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-23T14:23:40.162-05:00  INFO 2452 --- [practica2] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-09-23T14:23:40.170-05:00  INFO 2452 --- [practica2] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-23T14:23:40.247-05:00  INFO 2452 --- [practica2] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-23T14:23:40.255-05:00  INFO 2452 --- [practica2] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-23T14:23:40.384-05:00  INFO 2452 --- [practica2] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1b98355f
+2025-09-23T14:23:40.385-05:00  INFO 2452 --- [practica2] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-23T14:23:40.416-05:00  WARN 2452 --- [practica2] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-23T14:23:40.421-05:00  INFO 2452 --- [practica2] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-23T14:23:40.717-05:00  INFO 2452 --- [practica2] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-23T14:23:40.772-05:00  INFO 2452 --- [practica2] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-23T14:23:40.853-05:00  INFO 2452 --- [practica2] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-09-23T14:23:40.945-05:00  INFO 2452 --- [practica2] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-09-23T14:23:41.130-05:00  WARN 2452 --- [practica2] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-23T14:23:41.303-05:00  INFO 2452 --- [practica2] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-23T14:23:41.306-05:00  INFO 2452 --- [practica2] [main] c.r.practica2.Practica2Application       : Started Practica2Application in 1.801 seconds (process running for 2.028)
+2025-09-23T14:24:09.747-05:00  INFO 2452 --- [practica2] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23T14:24:09.748-05:00  INFO 2452 --- [practica2] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-23T14:24:09.750-05:00  INFO 2452 --- [practica2] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-09-23T14:24:09.768-05:00  WARN 2452 --- [practica2] [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : Request method 'GET' is not supported
+2025-09-23T14:25:10.762-05:00  INFO 2452 --- [practica2] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-23T14:25:10.770-05:00  INFO 2452 --- [practica2] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-23T14:25:10.796-05:00  INFO 2452 --- [practica2] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-23T14:25:10.798-05:00  INFO 2452 --- [practica2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-23T14:25:10.800-05:00  INFO 2452 --- [practica2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-23T14:25:12.136-05:00  INFO 2529 --- [practica2] [main] c.r.practica2.Practica2Application       : Starting Practica2Application using Java 21.0.8 with PID 2529 (/Users/delioribas/Desktop/Otros/practica2/target/classes started by delioribas in /Users/delioribas/Desktop/Otros/practica2)
+2025-09-23T14:25:12.137-05:00 DEBUG 2529 --- [practica2] [main] c.r.practica2.Practica2Application       : Running with Spring Boot v3.5.5, Spring v6.2.10
+2025-09-23T14:25:12.137-05:00  INFO 2529 --- [practica2] [main] c.r.practica2.Practica2Application       : No active profile set, falling back to 1 default profile: "default"
+2025-09-23T14:25:12.391-05:00  INFO 2529 --- [practica2] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-23T14:25:12.419-05:00  INFO 2529 --- [practica2] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 4 JPA repository interfaces.
+2025-09-23T14:25:12.564-05:00  INFO 2529 --- [practica2] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-23T14:25:12.568-05:00  INFO 2529 --- [practica2] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-23T14:25:12.568-05:00  INFO 2529 --- [practica2] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-23T14:25:12.580-05:00  INFO 2529 --- [practica2] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-23T14:25:12.580-05:00  INFO 2529 --- [practica2] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 427 ms
+2025-09-23T14:25:12.600-05:00 DEBUG 2529 --- [practica2] [main] c.r.practica2.security.JwtAuthFilter     : Filter 'jwtAuthFilter' configured for use
+2025-09-23T14:25:12.647-05:00  INFO 2529 --- [practica2] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-23T14:25:12.665-05:00  INFO 2529 --- [practica2] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-09-23T14:25:12.674-05:00  INFO 2529 --- [practica2] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-23T14:25:12.757-05:00  INFO 2529 --- [practica2] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-23T14:25:12.765-05:00  INFO 2529 --- [practica2] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-23T14:25:12.879-05:00  INFO 2529 --- [practica2] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3534651a
+2025-09-23T14:25:12.879-05:00  INFO 2529 --- [practica2] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-23T14:25:12.900-05:00  WARN 2529 --- [practica2] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-23T14:25:12.905-05:00  INFO 2529 --- [practica2] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-23T14:25:13.296-05:00  INFO 2529 --- [practica2] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-23T14:25:13.333-05:00  INFO 2529 --- [practica2] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-23T14:25:13.424-05:00  INFO 2529 --- [practica2] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-09-23T14:25:13.511-05:00  INFO 2529 --- [practica2] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-09-23T14:25:13.699-05:00  WARN 2529 --- [practica2] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-23T14:25:13.870-05:00  INFO 2529 --- [practica2] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-23T14:25:13.873-05:00  INFO 2529 --- [practica2] [main] c.r.practica2.Practica2Application       : Started Practica2Application in 1.871 seconds (process running for 2.075)
+2025-09-23T14:25:25.985-05:00  INFO 2529 --- [practica2] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23T14:25:25.987-05:00  INFO 2529 --- [practica2] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-23T14:25:25.997-05:00  INFO 2529 --- [practica2] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2025-09-23T14:28:14.623-05:00  INFO 2529 --- [practica2] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-23T14:28:14.630-05:00  INFO 2529 --- [practica2] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-23T14:28:14.634-05:00  INFO 2529 --- [practica2] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-23T14:28:14.638-05:00  INFO 2529 --- [practica2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-23T14:28:14.644-05:00  INFO 2529 --- [practica2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-23T14:28:27.446-05:00  INFO 2651 --- [practica2] [main] c.r.practica2.Practica2Application       : Starting Practica2Application using Java 21.0.8 with PID 2651 (/Users/delioribas/Desktop/Otros/practica2/target/classes started by delioribas in /Users/delioribas/Desktop/Otros/practica2)
+2025-09-23T14:28:27.447-05:00 DEBUG 2651 --- [practica2] [main] c.r.practica2.Practica2Application       : Running with Spring Boot v3.5.5, Spring v6.2.10
+2025-09-23T14:28:27.447-05:00  INFO 2651 --- [practica2] [main] c.r.practica2.Practica2Application       : No active profile set, falling back to 1 default profile: "default"
+2025-09-23T14:28:27.684-05:00  INFO 2651 --- [practica2] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-23T14:28:27.708-05:00  INFO 2651 --- [practica2] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 4 JPA repository interfaces.
+2025-09-23T14:28:27.863-05:00  INFO 2651 --- [practica2] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-23T14:28:27.868-05:00  INFO 2651 --- [practica2] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-23T14:28:27.868-05:00  INFO 2651 --- [practica2] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-23T14:28:27.880-05:00  INFO 2651 --- [practica2] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-23T14:28:27.880-05:00  INFO 2651 --- [practica2] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 418 ms
+2025-09-23T14:28:27.903-05:00 DEBUG 2651 --- [practica2] [main] c.r.practica2.security.JwtAuthFilter     : Filter 'jwtAuthFilter' configured for use
+2025-09-23T14:28:27.949-05:00  INFO 2651 --- [practica2] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-23T14:28:27.967-05:00  INFO 2651 --- [practica2] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-09-23T14:28:27.976-05:00  INFO 2651 --- [practica2] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-23T14:28:28.064-05:00  INFO 2651 --- [practica2] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-23T14:28:28.073-05:00  INFO 2651 --- [practica2] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-23T14:28:28.196-05:00  INFO 2651 --- [practica2] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6bdedbbd
+2025-09-23T14:28:28.197-05:00  INFO 2651 --- [practica2] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-23T14:28:28.216-05:00  WARN 2651 --- [practica2] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-23T14:28:28.221-05:00  INFO 2651 --- [practica2] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-23T14:28:28.527-05:00  INFO 2651 --- [practica2] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-23T14:28:28.564-05:00  INFO 2651 --- [practica2] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-23T14:28:28.646-05:00  INFO 2651 --- [practica2] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-09-23T14:28:28.730-05:00  INFO 2651 --- [practica2] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-09-23T14:28:28.916-05:00  WARN 2651 --- [practica2] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-23T14:28:29.081-05:00  INFO 2651 --- [practica2] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-23T14:28:29.084-05:00  INFO 2651 --- [practica2] [main] c.r.practica2.Practica2Application       : Started Practica2Application in 1.775 seconds (process running for 1.989)
+2025-09-23T14:28:36.971-05:00  INFO 2651 --- [practica2] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-23T14:28:36.974-05:00  INFO 2651 --- [practica2] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-23T14:28:36.977-05:00  INFO 2651 --- [practica2] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-23T14:28:36.978-05:00  INFO 2651 --- [practica2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-23T14:28:36.979-05:00  INFO 2651 --- [practica2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-23T14:28:38.045-05:00  INFO 2656 --- [practica2] [main] c.r.practica2.Practica2Application       : Starting Practica2Application using Java 21.0.8 with PID 2656 (/Users/delioribas/Desktop/Otros/practica2/target/classes started by delioribas in /Users/delioribas/Desktop/Otros/practica2)
+2025-09-23T14:28:38.046-05:00 DEBUG 2656 --- [practica2] [main] c.r.practica2.Practica2Application       : Running with Spring Boot v3.5.5, Spring v6.2.10
+2025-09-23T14:28:38.046-05:00  INFO 2656 --- [practica2] [main] c.r.practica2.Practica2Application       : No active profile set, falling back to 1 default profile: "default"
+2025-09-23T14:28:38.277-05:00  INFO 2656 --- [practica2] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-23T14:28:38.303-05:00  INFO 2656 --- [practica2] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 4 JPA repository interfaces.
+2025-09-23T14:28:38.452-05:00  INFO 2656 --- [practica2] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-23T14:28:38.457-05:00  INFO 2656 --- [practica2] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-23T14:28:38.457-05:00  INFO 2656 --- [practica2] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-23T14:28:38.469-05:00  INFO 2656 --- [practica2] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-23T14:28:38.469-05:00  INFO 2656 --- [practica2] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 409 ms
+2025-09-23T14:28:38.491-05:00 DEBUG 2656 --- [practica2] [main] c.r.practica2.security.JwtAuthFilter     : Filter 'jwtAuthFilter' configured for use
+2025-09-23T14:28:38.533-05:00  INFO 2656 --- [practica2] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-23T14:28:38.550-05:00  INFO 2656 --- [practica2] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-09-23T14:28:38.558-05:00  INFO 2656 --- [practica2] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-23T14:28:38.635-05:00  INFO 2656 --- [practica2] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-23T14:28:38.643-05:00  INFO 2656 --- [practica2] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-23T14:28:38.749-05:00  INFO 2656 --- [practica2] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@f5ae29e
+2025-09-23T14:28:38.749-05:00  INFO 2656 --- [practica2] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-23T14:28:38.768-05:00  WARN 2656 --- [practica2] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-23T14:28:38.774-05:00  INFO 2656 --- [practica2] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-23T14:28:39.061-05:00  INFO 2656 --- [practica2] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-23T14:28:39.098-05:00  INFO 2656 --- [practica2] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-23T14:28:39.178-05:00  INFO 2656 --- [practica2] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-09-23T14:28:39.261-05:00  INFO 2656 --- [practica2] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-09-23T14:28:39.442-05:00  WARN 2656 --- [practica2] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-23T14:28:39.592-05:00  INFO 2656 --- [practica2] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-23T14:28:39.595-05:00  INFO 2656 --- [practica2] [main] c.r.practica2.Practica2Application       : Started Practica2Application in 1.679 seconds (process running for 1.899)
+2025-09-23T14:28:47.903-05:00  INFO 2656 --- [practica2] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-23T14:28:47.907-05:00  INFO 2656 --- [practica2] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-23T14:28:47.911-05:00  INFO 2656 --- [practica2] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-23T14:28:47.912-05:00  INFO 2656 --- [practica2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-23T14:28:47.914-05:00  INFO 2656 --- [practica2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-23T14:28:48.989-05:00  INFO 2664 --- [practica2] [main] c.r.practica2.Practica2Application       : Starting Practica2Application using Java 21.0.8 with PID 2664 (/Users/delioribas/Desktop/Otros/practica2/target/classes started by delioribas in /Users/delioribas/Desktop/Otros/practica2)
+2025-09-23T14:28:48.989-05:00 DEBUG 2664 --- [practica2] [main] c.r.practica2.Practica2Application       : Running with Spring Boot v3.5.5, Spring v6.2.10
+2025-09-23T14:28:48.989-05:00  INFO 2664 --- [practica2] [main] c.r.practica2.Practica2Application       : No active profile set, falling back to 1 default profile: "default"
+2025-09-23T14:28:49.220-05:00  INFO 2664 --- [practica2] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-23T14:28:49.250-05:00  INFO 2664 --- [practica2] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 4 JPA repository interfaces.
+2025-09-23T14:28:49.402-05:00  INFO 2664 --- [practica2] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-23T14:28:49.407-05:00  INFO 2664 --- [practica2] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-23T14:28:49.407-05:00  INFO 2664 --- [practica2] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-23T14:28:49.421-05:00  INFO 2664 --- [practica2] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-23T14:28:49.421-05:00  INFO 2664 --- [practica2] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 416 ms
+2025-09-23T14:28:49.446-05:00 DEBUG 2664 --- [practica2] [main] c.r.practica2.security.JwtAuthFilter     : Filter 'jwtAuthFilter' configured for use
+2025-09-23T14:28:49.486-05:00  INFO 2664 --- [practica2] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-23T14:28:49.502-05:00  INFO 2664 --- [practica2] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-09-23T14:28:49.510-05:00  INFO 2664 --- [practica2] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-23T14:28:49.588-05:00  INFO 2664 --- [practica2] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-23T14:28:49.596-05:00  INFO 2664 --- [practica2] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-23T14:28:49.706-05:00  INFO 2664 --- [practica2] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@f5ae29e
+2025-09-23T14:28:49.707-05:00  INFO 2664 --- [practica2] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-23T14:28:49.724-05:00  WARN 2664 --- [practica2] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-23T14:28:49.729-05:00  INFO 2664 --- [practica2] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-23T14:28:50.014-05:00  INFO 2664 --- [practica2] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-23T14:28:50.054-05:00  INFO 2664 --- [practica2] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-23T14:28:50.134-05:00  INFO 2664 --- [practica2] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-09-23T14:28:50.221-05:00  INFO 2664 --- [practica2] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-09-23T14:28:50.402-05:00  WARN 2664 --- [practica2] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-23T14:28:50.569-05:00  INFO 2664 --- [practica2] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-23T14:28:50.572-05:00  INFO 2664 --- [practica2] [main] c.r.practica2.Practica2Application       : Started Practica2Application in 1.716 seconds (process running for 1.917)
+2025-09-23T14:49:26.015-05:00  INFO 2664 --- [practica2] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-23T14:49:26.022-05:00  INFO 2664 --- [practica2] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-23T14:49:26.028-05:00  INFO 2664 --- [practica2] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-23T14:49:26.031-05:00  INFO 2664 --- [practica2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-23T14:49:26.036-05:00  INFO 2664 --- [practica2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-23T14:49:57.731-05:00  INFO 3174 --- [practica2] [main] c.r.practica2.Practica2Application       : Starting Practica2Application using Java 21.0.8 with PID 3174 (/Users/delioribas/Desktop/Otros/practica2/target/classes started by delioribas in /Users/delioribas/Desktop/Otros/practica2)
+2025-09-23T14:49:57.732-05:00 DEBUG 3174 --- [practica2] [main] c.r.practica2.Practica2Application       : Running with Spring Boot v3.5.5, Spring v6.2.10
+2025-09-23T14:49:57.732-05:00  INFO 3174 --- [practica2] [main] c.r.practica2.Practica2Application       : No active profile set, falling back to 1 default profile: "default"
+2025-09-23T14:49:57.982-05:00  INFO 3174 --- [practica2] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-23T14:49:58.010-05:00  INFO 3174 --- [practica2] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 4 JPA repository interfaces.
+2025-09-23T14:49:58.161-05:00  INFO 3174 --- [practica2] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-23T14:49:58.165-05:00  INFO 3174 --- [practica2] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-23T14:49:58.165-05:00  INFO 3174 --- [practica2] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-23T14:49:58.177-05:00  INFO 3174 --- [practica2] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-23T14:49:58.177-05:00  INFO 3174 --- [practica2] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 431 ms
+2025-09-23T14:49:58.202-05:00 DEBUG 3174 --- [practica2] [main] c.r.practica2.security.JwtAuthFilter     : Filter 'jwtAuthFilter' configured for use
+2025-09-23T14:49:58.247-05:00  INFO 3174 --- [practica2] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-23T14:49:58.267-05:00  INFO 3174 --- [practica2] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-09-23T14:49:58.279-05:00  INFO 3174 --- [practica2] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-23T14:49:58.362-05:00  INFO 3174 --- [practica2] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-23T14:49:58.371-05:00  INFO 3174 --- [practica2] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-23T14:49:58.532-05:00  INFO 3174 --- [practica2] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3534651a
+2025-09-23T14:49:58.532-05:00  INFO 3174 --- [practica2] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-23T14:49:58.560-05:00  WARN 3174 --- [practica2] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-23T14:49:58.565-05:00  INFO 3174 --- [practica2] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-23T14:49:58.866-05:00  INFO 3174 --- [practica2] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-23T14:49:58.913-05:00  INFO 3174 --- [practica2] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-23T14:49:58.993-05:00  INFO 3174 --- [practica2] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-09-23T14:49:59.084-05:00  INFO 3174 --- [practica2] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-09-23T14:49:59.262-05:00  WARN 3174 --- [practica2] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-23T14:49:59.433-05:00  INFO 3174 --- [practica2] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-23T14:49:59.436-05:00  INFO 3174 --- [practica2] [main] c.r.practica2.Practica2Application       : Started Practica2Application in 1.85 seconds (process running for 2.081)
+2025-09-23T14:50:52.997-05:00  INFO 3174 --- [practica2] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23T14:50:52.998-05:00  INFO 3174 --- [practica2] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-23T14:50:53.009-05:00  INFO 3174 --- [practica2] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2025-09-23T14:51:26.795-05:00  INFO 3174 --- [practica2] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-23T14:51:26.811-05:00  INFO 3174 --- [practica2] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-23T14:51:26.816-05:00  INFO 3174 --- [practica2] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-23T14:51:26.818-05:00  INFO 3174 --- [practica2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-23T14:51:26.823-05:00  INFO 3174 --- [practica2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-23T14:51:28.002-05:00  INFO 3261 --- [practica2] [main] c.r.practica2.Practica2Application       : Starting Practica2Application using Java 21.0.8 with PID 3261 (/Users/delioribas/Desktop/Otros/practica2/target/classes started by delioribas in /Users/delioribas/Desktop/Otros/practica2)
+2025-09-23T14:51:28.003-05:00 DEBUG 3261 --- [practica2] [main] c.r.practica2.Practica2Application       : Running with Spring Boot v3.5.5, Spring v6.2.10
+2025-09-23T14:51:28.003-05:00  INFO 3261 --- [practica2] [main] c.r.practica2.Practica2Application       : No active profile set, falling back to 1 default profile: "default"
+2025-09-23T14:51:28.257-05:00  INFO 3261 --- [practica2] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-23T14:51:28.285-05:00  INFO 3261 --- [practica2] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 4 JPA repository interfaces.
+2025-09-23T14:51:28.445-05:00  INFO 3261 --- [practica2] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-23T14:51:28.450-05:00  INFO 3261 --- [practica2] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-23T14:51:28.450-05:00  INFO 3261 --- [practica2] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-23T14:51:28.463-05:00  INFO 3261 --- [practica2] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-23T14:51:28.463-05:00  INFO 3261 --- [practica2] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 445 ms
+2025-09-23T14:51:28.490-05:00 DEBUG 3261 --- [practica2] [main] c.r.practica2.security.JwtAuthFilter     : Filter 'jwtAuthFilter' configured for use
+2025-09-23T14:51:28.530-05:00  INFO 3261 --- [practica2] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-23T14:51:28.550-05:00  INFO 3261 --- [practica2] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-09-23T14:51:28.561-05:00  INFO 3261 --- [practica2] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-23T14:51:28.650-05:00  INFO 3261 --- [practica2] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-23T14:51:28.660-05:00  INFO 3261 --- [practica2] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-23T14:51:28.822-05:00  INFO 3261 --- [practica2] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3534651a
+2025-09-23T14:51:28.822-05:00  INFO 3261 --- [practica2] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-23T14:51:28.849-05:00  WARN 3261 --- [practica2] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-23T14:51:28.854-05:00  INFO 3261 --- [practica2] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-23T14:51:29.223-05:00  INFO 3261 --- [practica2] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-23T14:51:29.268-05:00  INFO 3261 --- [practica2] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-23T14:51:29.348-05:00  INFO 3261 --- [practica2] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-09-23T14:51:29.431-05:00  INFO 3261 --- [practica2] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-09-23T14:51:29.616-05:00  WARN 3261 --- [practica2] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-23T14:51:29.788-05:00  INFO 3261 --- [practica2] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-23T14:51:29.791-05:00  INFO 3261 --- [practica2] [main] c.r.practica2.Practica2Application       : Started Practica2Application in 1.937 seconds (process running for 2.208)
+2025-09-23T14:51:32.763-05:00  INFO 3261 --- [practica2] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23T14:51:32.764-05:00  INFO 3261 --- [practica2] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-23T14:51:32.764-05:00  INFO 3261 --- [practica2] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-09-23T14:51:40.383-05:00  INFO 3261 --- [practica2] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-23T14:51:40.387-05:00  INFO 3261 --- [practica2] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-23T14:51:40.389-05:00  INFO 3261 --- [practica2] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-23T14:51:40.391-05:00  INFO 3261 --- [practica2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-23T14:51:40.393-05:00  INFO 3261 --- [practica2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-23T14:51:41.570-05:00  INFO 3272 --- [practica2] [main] c.r.practica2.Practica2Application       : Starting Practica2Application using Java 21.0.8 with PID 3272 (/Users/delioribas/Desktop/Otros/practica2/target/classes started by delioribas in /Users/delioribas/Desktop/Otros/practica2)
+2025-09-23T14:51:41.571-05:00 DEBUG 3272 --- [practica2] [main] c.r.practica2.Practica2Application       : Running with Spring Boot v3.5.5, Spring v6.2.10
+2025-09-23T14:51:41.571-05:00  INFO 3272 --- [practica2] [main] c.r.practica2.Practica2Application       : No active profile set, falling back to 1 default profile: "default"
+2025-09-23T14:51:41.806-05:00  INFO 3272 --- [practica2] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-23T14:51:41.829-05:00  INFO 3272 --- [practica2] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 4 JPA repository interfaces.
+2025-09-23T14:51:41.979-05:00  INFO 3272 --- [practica2] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-23T14:51:41.983-05:00  INFO 3272 --- [practica2] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-23T14:51:41.983-05:00  INFO 3272 --- [practica2] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-23T14:51:41.995-05:00  INFO 3272 --- [practica2] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-23T14:51:41.995-05:00  INFO 3272 --- [practica2] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 409 ms
+2025-09-23T14:51:42.015-05:00 DEBUG 3272 --- [practica2] [main] c.r.practica2.security.JwtAuthFilter     : Filter 'jwtAuthFilter' configured for use
+2025-09-23T14:51:42.058-05:00  INFO 3272 --- [practica2] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-23T14:51:42.075-05:00  INFO 3272 --- [practica2] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-09-23T14:51:42.084-05:00  INFO 3272 --- [practica2] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-23T14:51:42.170-05:00  INFO 3272 --- [practica2] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-23T14:51:42.177-05:00  INFO 3272 --- [practica2] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-23T14:51:42.287-05:00  INFO 3272 --- [practica2] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3f122cdc
+2025-09-23T14:51:42.288-05:00  INFO 3272 --- [practica2] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-23T14:51:42.307-05:00  WARN 3272 --- [practica2] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-23T14:51:42.312-05:00  INFO 3272 --- [practica2] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-23T14:51:42.607-05:00  INFO 3272 --- [practica2] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-23T14:51:42.647-05:00  INFO 3272 --- [practica2] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-23T14:51:42.727-05:00  INFO 3272 --- [practica2] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-09-23T14:51:42.809-05:00  INFO 3272 --- [practica2] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-09-23T14:51:42.990-05:00  WARN 3272 --- [practica2] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-23T14:51:43.157-05:00  INFO 3272 --- [practica2] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-23T14:51:43.160-05:00  INFO 3272 --- [practica2] [main] c.r.practica2.Practica2Application       : Started Practica2Application in 1.743 seconds (process running for 2.052)
+2025-09-23T14:51:46.338-05:00  INFO 3272 --- [practica2] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23T14:51:46.338-05:00  INFO 3272 --- [practica2] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-23T14:51:46.339-05:00  INFO 3272 --- [practica2] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-09-23T14:51:52.085-05:00  INFO 3272 --- [practica2] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-23T14:51:52.089-05:00  INFO 3272 --- [practica2] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-23T14:51:52.091-05:00  INFO 3272 --- [practica2] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-23T14:51:52.092-05:00  INFO 3272 --- [practica2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-23T14:51:52.094-05:00  INFO 3272 --- [practica2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-23T14:51:53.212-05:00  INFO 3281 --- [practica2] [main] c.r.practica2.Practica2Application       : Starting Practica2Application using Java 21.0.8 with PID 3281 (/Users/delioribas/Desktop/Otros/practica2/target/classes started by delioribas in /Users/delioribas/Desktop/Otros/practica2)
+2025-09-23T14:51:53.212-05:00 DEBUG 3281 --- [practica2] [main] c.r.practica2.Practica2Application       : Running with Spring Boot v3.5.5, Spring v6.2.10
+2025-09-23T14:51:53.212-05:00  INFO 3281 --- [practica2] [main] c.r.practica2.Practica2Application       : No active profile set, falling back to 1 default profile: "default"
+2025-09-23T14:51:53.434-05:00  INFO 3281 --- [practica2] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-23T14:51:53.462-05:00  INFO 3281 --- [practica2] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 4 JPA repository interfaces.
+2025-09-23T14:51:53.611-05:00  INFO 3281 --- [practica2] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-23T14:51:53.615-05:00  INFO 3281 --- [practica2] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-23T14:51:53.615-05:00  INFO 3281 --- [practica2] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-23T14:51:53.627-05:00  INFO 3281 --- [practica2] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-23T14:51:53.627-05:00  INFO 3281 --- [practica2] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 400 ms
+2025-09-23T14:51:53.649-05:00 DEBUG 3281 --- [practica2] [main] c.r.practica2.security.JwtAuthFilter     : Filter 'jwtAuthFilter' configured for use
+2025-09-23T14:51:53.689-05:00  INFO 3281 --- [practica2] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-23T14:51:53.706-05:00  INFO 3281 --- [practica2] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-09-23T14:51:53.716-05:00  INFO 3281 --- [practica2] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-23T14:51:53.794-05:00  INFO 3281 --- [practica2] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-23T14:51:53.806-05:00  INFO 3281 --- [practica2] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-23T14:51:53.913-05:00  INFO 3281 --- [practica2] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5a2f401a
+2025-09-23T14:51:53.914-05:00  INFO 3281 --- [practica2] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-23T14:51:53.932-05:00  WARN 3281 --- [practica2] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-23T14:51:53.938-05:00  INFO 3281 --- [practica2] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-23T14:51:54.232-05:00  INFO 3281 --- [practica2] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-23T14:51:54.267-05:00  INFO 3281 --- [practica2] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-23T14:51:54.347-05:00  INFO 3281 --- [practica2] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-09-23T14:51:54.429-05:00  INFO 3281 --- [practica2] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-09-23T14:51:54.611-05:00  WARN 3281 --- [practica2] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-23T14:51:54.765-05:00  INFO 3281 --- [practica2] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-23T14:51:54.768-05:00  INFO 3281 --- [practica2] [main] c.r.practica2.Practica2Application       : Started Practica2Application in 1.691 seconds (process running for 1.911)
+2025-09-23T14:52:30.277-05:00  INFO 3281 --- [practica2] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-23T14:52:30.284-05:00  INFO 3281 --- [practica2] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-23T14:52:30.289-05:00  INFO 3281 --- [practica2] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-23T14:52:30.292-05:00  INFO 3281 --- [practica2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-23T14:52:30.296-05:00  INFO 3281 --- [practica2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-23T14:52:31.627-05:00  INFO 3301 --- [practica2] [main] c.r.practica2.Practica2Application       : Starting Practica2Application using Java 21.0.8 with PID 3301 (/Users/delioribas/Desktop/Otros/practica2/target/classes started by delioribas in /Users/delioribas/Desktop/Otros/practica2)
+2025-09-23T14:52:31.628-05:00 DEBUG 3301 --- [practica2] [main] c.r.practica2.Practica2Application       : Running with Spring Boot v3.5.5, Spring v6.2.10
+2025-09-23T14:52:31.629-05:00  INFO 3301 --- [practica2] [main] c.r.practica2.Practica2Application       : No active profile set, falling back to 1 default profile: "default"
+2025-09-23T14:52:31.862-05:00  INFO 3301 --- [practica2] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-23T14:52:31.890-05:00  INFO 3301 --- [practica2] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 4 JPA repository interfaces.
+2025-09-23T14:52:32.031-05:00  INFO 3301 --- [practica2] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-23T14:52:32.035-05:00  INFO 3301 --- [practica2] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-23T14:52:32.035-05:00  INFO 3301 --- [practica2] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-23T14:52:32.047-05:00  INFO 3301 --- [practica2] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-23T14:52:32.047-05:00  INFO 3301 --- [practica2] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 404 ms
+2025-09-23T14:52:32.065-05:00 DEBUG 3301 --- [practica2] [main] c.r.practica2.security.JwtAuthFilter     : Filter 'jwtAuthFilter' configured for use
+2025-09-23T14:52:32.106-05:00  INFO 3301 --- [practica2] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-23T14:52:32.125-05:00  INFO 3301 --- [practica2] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-09-23T14:52:32.134-05:00  INFO 3301 --- [practica2] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-23T14:52:32.213-05:00  INFO 3301 --- [practica2] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-23T14:52:32.221-05:00  INFO 3301 --- [practica2] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-23T14:52:32.329-05:00  INFO 3301 --- [practica2] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2d593b56
+2025-09-23T14:52:32.329-05:00  INFO 3301 --- [practica2] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-23T14:52:32.350-05:00  WARN 3301 --- [practica2] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-23T14:52:32.355-05:00  INFO 3301 --- [practica2] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-23T14:52:32.641-05:00  INFO 3301 --- [practica2] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-23T14:52:32.676-05:00  INFO 3301 --- [practica2] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-23T14:52:32.754-05:00  INFO 3301 --- [practica2] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-09-23T14:52:32.834-05:00  INFO 3301 --- [practica2] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-09-23T14:52:33.013-05:00  WARN 3301 --- [practica2] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-23T14:52:33.160-05:00  INFO 3301 --- [practica2] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-23T14:52:33.163-05:00  INFO 3301 --- [practica2] [main] c.r.practica2.Practica2Application       : Started Practica2Application in 1.669 seconds (process running for 1.866)
+2025-09-23T14:52:38.721-05:00  INFO 3301 --- [practica2] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23T14:52:38.722-05:00  INFO 3301 --- [practica2] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-23T14:52:38.723-05:00  INFO 3301 --- [practica2] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-09-23T15:51:44.729-05:00  WARN 3301 --- [practica2] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m11s771ms).
+2025-09-23T15:52:20.312-05:00  INFO 3301 --- [practica2] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-23T15:52:20.326-05:00  INFO 3301 --- [practica2] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-23T15:52:20.331-05:00  INFO 3301 --- [practica2] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-23T15:52:20.334-05:00  INFO 3301 --- [practica2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-23T15:52:20.339-05:00  INFO 3301 --- [practica2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
