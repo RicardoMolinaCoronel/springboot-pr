@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/hello")
+//@RequestMapping("/hello")
 public class HelloController {
 
     private HelloService helloService;
@@ -16,7 +16,7 @@ public class HelloController {
         this.helloService = helloService;
     }
 
-    @GetMapping("/first")
+    @GetMapping("/hello")
     public HelloResponse first()
     {
        return helloService.hello();

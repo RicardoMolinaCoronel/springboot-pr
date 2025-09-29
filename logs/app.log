@@ -1982,3 +1982,184 @@ Caused by: java.lang.NullPointerException: Cannot invoke "org.springframework.cl
 2025-09-28T21:05:36.115-05:00  INFO 1268 --- [practica2] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
 2025-09-28T21:05:36.132-05:00  INFO 1268 --- [practica2] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRACTICA2/DESKTOP-FNU3O5L:practica2:8080 - deregister  status: 200
 2025-09-28T21:05:36.133-05:00  INFO 1268 --- [practica2] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-09-28T21:13:08.078-05:00  INFO 6668 --- [practica2] [main] c.r.practica2.Practica2Application       : Starting Practica2Application using Java 21.0.8 with PID 6668 (C:\Users\ASUS\Desktop\Estudios\Otros\Practicas\springboot-pr\target\classes started by ASUS in C:\Users\ASUS\Desktop\Estudios\Otros\Practicas\springboot-pr)
+2025-09-28T21:13:08.079-05:00 DEBUG 6668 --- [practica2] [main] c.r.practica2.Practica2Application       : Running with Spring Boot v3.3.5, Spring v6.1.14
+2025-09-28T21:13:08.081-05:00  INFO 6668 --- [practica2] [main] c.r.practica2.Practica2Application       : No active profile set, falling back to 1 default profile: "default"
+2025-09-28T21:13:08.645-05:00  INFO 6668 --- [practica2] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-28T21:13:08.757-05:00  INFO 6668 --- [practica2] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 106 ms. Found 4 JPA repository interfaces.
+2025-09-28T21:13:08.983-05:00  INFO 6668 --- [practica2] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ad818e1b-6c0e-3bb7-b7ff-276afdd1ceb7
+2025-09-28T21:13:09.434-05:00  INFO 6668 --- [practica2] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-28T21:13:09.444-05:00  INFO 6668 --- [practica2] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-28T21:13:09.444-05:00  INFO 6668 --- [practica2] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2025-09-28T21:13:09.497-05:00  INFO 6668 --- [practica2] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-28T21:13:09.497-05:00  INFO 6668 --- [practica2] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1387 ms
+2025-09-28T21:13:09.557-05:00 DEBUG 6668 --- [practica2] [main] c.r.practica2.security.JwtAuthFilter     : Filter 'jwtAuthFilter' configured for use
+2025-09-28T21:13:09.661-05:00  INFO 6668 --- [practica2] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-28T21:13:09.704-05:00  INFO 6668 --- [practica2] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-09-28T21:13:09.725-05:00  INFO 6668 --- [practica2] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-28T21:13:09.922-05:00  INFO 6668 --- [practica2] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-28T21:13:09.941-05:00  INFO 6668 --- [practica2] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-28T21:13:10.155-05:00  INFO 6668 --- [practica2] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@673605ef
+2025-09-28T21:13:10.156-05:00  INFO 6668 --- [practica2] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-28T21:13:10.191-05:00  WARN 6668 --- [practica2] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-28T21:13:10.879-05:00  INFO 6668 --- [practica2] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-28T21:13:10.933-05:00  INFO 6668 --- [practica2] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-28T21:13:11.077-05:00  INFO 6668 --- [practica2] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-09-28T21:13:11.316-05:00  INFO 6668 --- [practica2] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-09-28T21:13:11.676-05:00  WARN 6668 --- [practica2] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-28T21:13:12.572-05:00  INFO 6668 --- [practica2] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-09-28T21:13:12.639-05:00  WARN 6668 --- [practica2] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-09-28T21:13:12.706-05:00  INFO 6668 --- [practica2] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-09-28T21:13:12.724-05:00  INFO 6668 --- [practica2] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-09-28T21:13:12.727-05:00  INFO 6668 --- [practica2] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-09-28T21:13:12.733-05:00  INFO 6668 --- [practica2] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-09-28T21:13:12.733-05:00  INFO 6668 --- [practica2] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-09-28T21:13:12.733-05:00  INFO 6668 --- [practica2] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-09-28T21:13:12.733-05:00  INFO 6668 --- [practica2] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-09-28T21:13:12.733-05:00  INFO 6668 --- [practica2] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-09-28T21:13:12.733-05:00  INFO 6668 --- [practica2] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-09-28T21:13:12.733-05:00  INFO 6668 --- [practica2] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-09-28T21:13:12.976-05:00  INFO 6668 --- [practica2] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-09-28T21:13:12.977-05:00  INFO 6668 --- [practica2] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-09-28T21:13:12.978-05:00  INFO 6668 --- [practica2] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-09-28T21:13:12.980-05:00  INFO 6668 --- [practica2] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1759111992979 with initial instances count: 0
+2025-09-28T21:13:12.988-05:00  INFO 6668 --- [practica2] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PRACTICA2 with eureka with status UP
+2025-09-28T21:13:12.988-05:00  INFO 6668 --- [practica2] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1759111992988, current=UP, previous=STARTING]
+2025-09-28T21:13:12.990-05:00  INFO 6668 --- [practica2] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRACTICA2/DESKTOP-FNU3O5L:practica2:8080: registering service...
+2025-09-28T21:13:13.002-05:00  INFO 6668 --- [practica2] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-28T21:13:13.003-05:00  INFO 6668 --- [practica2] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8080
+2025-09-28T21:13:13.013-05:00  INFO 6668 --- [practica2] [main] c.r.practica2.Practica2Application       : Started Practica2Application in 5.304 seconds (process running for 5.787)
+2025-09-28T21:13:13.017-05:00  INFO 6668 --- [practica2] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRACTICA2/DESKTOP-FNU3O5L:practica2:8080 - registration status: 204
+2025-09-28T21:13:26.544-05:00  INFO 6668 --- [practica2] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PRACTICA2 with eureka with status DOWN
+2025-09-28T21:13:26.544-05:00  INFO 6668 --- [practica2] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1759112006544, current=DOWN, previous=UP]
+2025-09-28T21:13:26.544-05:00  INFO 6668 --- [practica2] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRACTICA2/DESKTOP-FNU3O5L:practica2:8080: registering service...
+2025-09-28T21:13:26.552-05:00  INFO 6668 --- [practica2] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRACTICA2/DESKTOP-FNU3O5L:practica2:8080 - registration status: 204
+2025-09-28T21:13:26.556-05:00  INFO 6668 --- [practica2] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-28T21:13:26.558-05:00  INFO 6668 --- [practica2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-28T21:13:26.564-05:00  INFO 6668 --- [practica2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-28T21:13:26.564-05:00  INFO 6668 --- [practica2] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-09-28T21:14:30.960-05:00  INFO 2688 --- [practica2] [main] c.r.practica2.Practica2Application       : Starting Practica2Application using Java 21.0.8 with PID 2688 (C:\Users\ASUS\Desktop\Estudios\Otros\Practicas\springboot-pr\target\classes started by ASUS in C:\Users\ASUS\Desktop\Estudios\Otros\Practicas\springboot-pr)
+2025-09-28T21:14:30.961-05:00 DEBUG 2688 --- [practica2] [main] c.r.practica2.Practica2Application       : Running with Spring Boot v3.3.5, Spring v6.1.14
+2025-09-28T21:14:30.962-05:00  INFO 2688 --- [practica2] [main] c.r.practica2.Practica2Application       : No active profile set, falling back to 1 default profile: "default"
+2025-09-28T21:14:31.548-05:00  INFO 2688 --- [practica2] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-28T21:14:31.660-05:00  INFO 2688 --- [practica2] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 107 ms. Found 4 JPA repository interfaces.
+2025-09-28T21:14:31.904-05:00  INFO 2688 --- [practica2] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ad818e1b-6c0e-3bb7-b7ff-276afdd1ceb7
+2025-09-28T21:14:32.373-05:00  INFO 2688 --- [practica2] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-28T21:14:32.384-05:00  INFO 2688 --- [practica2] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-28T21:14:32.384-05:00  INFO 2688 --- [practica2] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2025-09-28T21:14:32.440-05:00  INFO 2688 --- [practica2] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-28T21:14:32.440-05:00  INFO 2688 --- [practica2] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1450 ms
+2025-09-28T21:14:32.499-05:00 DEBUG 2688 --- [practica2] [main] c.r.practica2.security.JwtAuthFilter     : Filter 'jwtAuthFilter' configured for use
+2025-09-28T21:14:32.611-05:00  INFO 2688 --- [practica2] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-28T21:14:32.652-05:00  INFO 2688 --- [practica2] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-09-28T21:14:32.677-05:00  INFO 2688 --- [practica2] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-28T21:14:32.879-05:00  INFO 2688 --- [practica2] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-28T21:14:32.898-05:00  INFO 2688 --- [practica2] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-28T21:14:33.117-05:00  INFO 2688 --- [practica2] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6054ac20
+2025-09-28T21:14:33.119-05:00  INFO 2688 --- [practica2] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-28T21:14:33.154-05:00  WARN 2688 --- [practica2] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-28T21:14:33.852-05:00  INFO 2688 --- [practica2] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-28T21:14:33.908-05:00  INFO 2688 --- [practica2] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-28T21:14:34.057-05:00  INFO 2688 --- [practica2] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-09-28T21:14:34.299-05:00  INFO 2688 --- [practica2] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-09-28T21:14:34.665-05:00  WARN 2688 --- [practica2] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-28T21:14:35.613-05:00  INFO 2688 --- [practica2] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-09-28T21:14:35.693-05:00  WARN 2688 --- [practica2] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-09-28T21:14:35.767-05:00  INFO 2688 --- [practica2] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-09-28T21:14:35.788-05:00  INFO 2688 --- [practica2] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-09-28T21:14:35.792-05:00  INFO 2688 --- [practica2] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-09-28T21:14:35.798-05:00  INFO 2688 --- [practica2] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-09-28T21:14:35.798-05:00  INFO 2688 --- [practica2] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-09-28T21:14:35.798-05:00  INFO 2688 --- [practica2] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-09-28T21:14:35.799-05:00  INFO 2688 --- [practica2] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-09-28T21:14:35.799-05:00  INFO 2688 --- [practica2] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-09-28T21:14:35.799-05:00  INFO 2688 --- [practica2] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-09-28T21:14:35.799-05:00  INFO 2688 --- [practica2] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-09-28T21:14:36.062-05:00  INFO 2688 --- [practica2] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-09-28T21:14:36.065-05:00  INFO 2688 --- [practica2] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-09-28T21:14:36.065-05:00  INFO 2688 --- [practica2] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-09-28T21:14:36.065-05:00  INFO 2688 --- [practica2] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1759112076065 with initial instances count: 1
+2025-09-28T21:14:36.074-05:00  INFO 2688 --- [practica2] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PRACTICA2 with eureka with status UP
+2025-09-28T21:14:36.074-05:00  INFO 2688 --- [practica2] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1759112076074, current=UP, previous=STARTING]
+2025-09-28T21:14:36.078-05:00  INFO 2688 --- [practica2] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRACTICA2/DESKTOP-FNU3O5L:practica2:8080: registering service...
+2025-09-28T21:14:36.092-05:00  INFO 2688 --- [practica2] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-28T21:14:36.093-05:00  INFO 2688 --- [practica2] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8080
+2025-09-28T21:14:36.103-05:00  INFO 2688 --- [practica2] [main] c.r.practica2.Practica2Application       : Started Practica2Application in 5.49 seconds (process running for 5.964)
+2025-09-28T21:14:36.107-05:00  INFO 2688 --- [practica2] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRACTICA2/DESKTOP-FNU3O5L:practica2:8080 - registration status: 204
+2025-09-28T21:14:53.774-05:00  INFO 2688 --- [practica2] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-28T21:14:53.774-05:00  INFO 2688 --- [practica2] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-28T21:14:53.774-05:00  INFO 2688 --- [practica2] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-09-28T21:15:34.888-05:00  INFO 2688 --- [practica2] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PRACTICA2 with eureka with status DOWN
+2025-09-28T21:15:34.888-05:00  INFO 2688 --- [practica2] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1759112134888, current=DOWN, previous=UP]
+2025-09-28T21:15:34.889-05:00  INFO 2688 --- [practica2] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRACTICA2/DESKTOP-FNU3O5L:practica2:8080: registering service...
+2025-09-28T21:15:34.899-05:00  INFO 2688 --- [practica2] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRACTICA2/DESKTOP-FNU3O5L:practica2:8080 - registration status: 204
+2025-09-28T21:15:34.899-05:00  INFO 2688 --- [practica2] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-28T21:15:34.901-05:00  INFO 2688 --- [practica2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-28T21:15:34.906-05:00  INFO 2688 --- [practica2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-28T21:15:34.907-05:00  INFO 2688 --- [practica2] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-09-28T21:15:37.917-05:00  INFO 2688 --- [practica2] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-09-28T21:15:37.917-05:00  WARN 2688 --- [practica2] [DiscoveryClient-%d] c.netflix.discovery.TimedSupervisorTask  : task supervisor shutting down, can't accept the task
+2025-09-28T21:15:37.920-05:00  INFO 2688 --- [practica2] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRACTICA2/DESKTOP-FNU3O5L:practica2:8080 - deregister  status: 200
+2025-09-28T21:15:37.920-05:00  INFO 2688 --- [practica2] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-09-28T21:15:41.687-05:00  INFO 9036 --- [practica2] [main] c.r.practica2.Practica2Application       : Starting Practica2Application using Java 21.0.8 with PID 9036 (C:\Users\ASUS\Desktop\Estudios\Otros\Practicas\springboot-pr\target\classes started by ASUS in C:\Users\ASUS\Desktop\Estudios\Otros\Practicas\springboot-pr)
+2025-09-28T21:15:41.688-05:00 DEBUG 9036 --- [practica2] [main] c.r.practica2.Practica2Application       : Running with Spring Boot v3.3.5, Spring v6.1.14
+2025-09-28T21:15:41.689-05:00  INFO 9036 --- [practica2] [main] c.r.practica2.Practica2Application       : No active profile set, falling back to 1 default profile: "default"
+2025-09-28T21:15:42.233-05:00  INFO 9036 --- [practica2] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-28T21:15:42.344-05:00  INFO 9036 --- [practica2] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 105 ms. Found 4 JPA repository interfaces.
+2025-09-28T21:15:42.567-05:00  INFO 9036 --- [practica2] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ad818e1b-6c0e-3bb7-b7ff-276afdd1ceb7
+2025-09-28T21:15:43.003-05:00  INFO 9036 --- [practica2] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-28T21:15:43.012-05:00  INFO 9036 --- [practica2] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-28T21:15:43.012-05:00  INFO 9036 --- [practica2] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2025-09-28T21:15:43.062-05:00  INFO 9036 --- [practica2] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-28T21:15:43.063-05:00  INFO 9036 --- [practica2] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1347 ms
+2025-09-28T21:15:43.120-05:00 DEBUG 9036 --- [practica2] [main] c.r.practica2.security.JwtAuthFilter     : Filter 'jwtAuthFilter' configured for use
+2025-09-28T21:15:43.223-05:00  INFO 9036 --- [practica2] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-28T21:15:43.264-05:00  INFO 9036 --- [practica2] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-09-28T21:15:43.286-05:00  INFO 9036 --- [practica2] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-28T21:15:43.476-05:00  INFO 9036 --- [practica2] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-28T21:15:43.495-05:00  INFO 9036 --- [practica2] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-28T21:15:43.703-05:00  INFO 9036 --- [practica2] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7e7391e8
+2025-09-28T21:15:43.705-05:00  INFO 9036 --- [practica2] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-28T21:15:43.740-05:00  WARN 9036 --- [practica2] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-28T21:15:44.420-05:00  INFO 9036 --- [practica2] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-28T21:15:44.475-05:00  INFO 9036 --- [practica2] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-28T21:15:44.618-05:00  INFO 9036 --- [practica2] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-09-28T21:15:44.857-05:00  INFO 9036 --- [practica2] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-09-28T21:15:45.214-05:00  WARN 9036 --- [practica2] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-28T21:15:46.093-05:00  INFO 9036 --- [practica2] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-09-28T21:15:46.155-05:00  WARN 9036 --- [practica2] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-09-28T21:15:46.225-05:00  INFO 9036 --- [practica2] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-09-28T21:15:46.243-05:00  INFO 9036 --- [practica2] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-09-28T21:15:46.246-05:00  INFO 9036 --- [practica2] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-09-28T21:15:46.252-05:00  INFO 9036 --- [practica2] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-09-28T21:15:46.252-05:00  INFO 9036 --- [practica2] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-09-28T21:15:46.252-05:00  INFO 9036 --- [practica2] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-09-28T21:15:46.252-05:00  INFO 9036 --- [practica2] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-09-28T21:15:46.252-05:00  INFO 9036 --- [practica2] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-09-28T21:15:46.252-05:00  INFO 9036 --- [practica2] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-09-28T21:15:46.252-05:00  INFO 9036 --- [practica2] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-09-28T21:15:46.499-05:00  INFO 9036 --- [practica2] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-09-28T21:15:46.500-05:00  INFO 9036 --- [practica2] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-09-28T21:15:46.502-05:00  INFO 9036 --- [practica2] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-09-28T21:15:46.503-05:00  INFO 9036 --- [practica2] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1759112146503 with initial instances count: 1
+2025-09-28T21:15:46.516-05:00  INFO 9036 --- [practica2] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PRACTICA2 with eureka with status UP
+2025-09-28T21:15:46.516-05:00  INFO 9036 --- [practica2] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1759112146516, current=UP, previous=STARTING]
+2025-09-28T21:15:46.517-05:00  INFO 9036 --- [practica2] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRACTICA2/DESKTOP-FNU3O5L:practica2:8080: registering service...
+2025-09-28T21:15:46.536-05:00  INFO 9036 --- [practica2] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-28T21:15:46.537-05:00  INFO 9036 --- [practica2] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8080
+2025-09-28T21:15:46.544-05:00  INFO 9036 --- [practica2] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRACTICA2/DESKTOP-FNU3O5L:practica2:8080 - registration status: 204
+2025-09-28T21:15:46.550-05:00  INFO 9036 --- [practica2] [main] c.r.practica2.Practica2Application       : Started Practica2Application in 5.206 seconds (process running for 5.669)
+2025-09-28T21:15:51.548-05:00  INFO 9036 --- [practica2] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-28T21:15:51.548-05:00  INFO 9036 --- [practica2] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-28T21:15:51.549-05:00  INFO 9036 --- [practica2] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-09-28T21:15:57.465-05:00  INFO 9036 --- [practica2] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PRACTICA2 with eureka with status DOWN
+2025-09-28T21:15:57.465-05:00  INFO 9036 --- [practica2] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1759112157465, current=DOWN, previous=UP]
+2025-09-28T21:15:57.465-05:00  INFO 9036 --- [practica2] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRACTICA2/DESKTOP-FNU3O5L:practica2:8080: registering service...
+2025-09-28T21:15:57.476-05:00  INFO 9036 --- [practica2] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-28T21:15:57.477-05:00  INFO 9036 --- [practica2] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRACTICA2/DESKTOP-FNU3O5L:practica2:8080 - registration status: 204
+2025-09-28T21:15:57.479-05:00  INFO 9036 --- [practica2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-28T21:15:57.485-05:00  INFO 9036 --- [practica2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-28T21:15:57.486-05:00  INFO 9036 --- [practica2] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-09-28T21:16:00.492-05:00  INFO 9036 --- [practica2] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-09-28T21:16:00.510-05:00  INFO 9036 --- [practica2] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRACTICA2/DESKTOP-FNU3O5L:practica2:8080 - deregister  status: 200
+2025-09-28T21:16:00.510-05:00  INFO 9036 --- [practica2] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
