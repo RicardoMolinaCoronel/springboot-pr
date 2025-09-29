@@ -31,5 +31,6 @@ public class OtherConfiguration {
         return new EnglishGreetingService();
     }
 
+    @Bean feign.Logger.Level feignLoggerLevel() { return feign.Logger.Level.FULL; }
 
 }
