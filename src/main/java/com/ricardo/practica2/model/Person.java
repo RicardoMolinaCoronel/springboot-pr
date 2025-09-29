@@ -3,6 +3,7 @@ package com.ricardo.practica2.model;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import com.ricardo.practica2.validators.ValidPersonName;
 import jakarta.persistence.*;
 
 import java.util.List;
@@ -16,6 +17,7 @@ public class Person {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @ValidPersonName
     private String name;
 
     private Integer age;
