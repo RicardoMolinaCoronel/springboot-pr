@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: pr-client-service
+    name: forest-service
   cloud:
     openfeign:
       circuitbreaker:
