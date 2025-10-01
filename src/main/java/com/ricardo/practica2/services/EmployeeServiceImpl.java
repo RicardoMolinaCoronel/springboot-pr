@@ -9,6 +9,9 @@ import com.ricardo.practica2.repository.PersonRepository;
 import com.ricardo.practica2.repository.StudentRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -28,6 +31,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         this.personRepository = personRepository;
     }
 
+    @Cacheable(cacheNames = "employees", key="#id")
     public Employee getEmployeeById(Integer id){
         return employeeRepository.findById(id).orElse(null);
     }
@@ -40,6 +44,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         return employeeRepository.save(employee);
     }
 
+    @CachePut(cacheNames = "employees", key = "#id")
     public Employee updateEmployee(Integer id, Employee employee){
             Employee currentEmployee = employeeRepository.findById(id).orElse(null);
             if(currentEmployee != null){
@@ -52,6 +57,7 @@ public class EmployeeServiceImpl implements EmployeeService {
             }
     }
 
+    @CacheEvict(cacheNames = "employees", key = "#id")
     public void deleteEmployee(Integer id){
         employeeRepository.deleteById(id);
     }

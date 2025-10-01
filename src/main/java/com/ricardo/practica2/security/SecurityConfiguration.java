@@ -42,7 +42,7 @@ public class SecurityConfiguration {
                 .csrf(csrf -> csrf.disable())
                 .sessionManagement(sm -> sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/auth/**", "/employees/**", "/greeting/**", "/hello/first").permitAll() // widen matcher
+                        .requestMatchers("/auth/**", "/employees/**", "/greeting/**", "/hello/first", "/actuator/**", "/logger/**").permitAll() // widen matcher
                         .anyRequest().authenticated()
                 )
                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class) // <-- register it

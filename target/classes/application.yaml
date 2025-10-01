@@ -8,6 +8,16 @@ spring:
     openfeign:
       circuitbreaker:
         enabled: true
+  cache:
+    type: redis
+    redis:
+      time-to-live: 600s
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+
 eureka:
   client:
     service-url:
@@ -20,6 +30,29 @@ management:
   zipkin:
     tracing:
       endpoint: http://localhost:9411/api/v2/spans
+  endpoints:
+    web:
+      exposure:
+        include: health, metrics, info, prometheus, beans
+  endpoint:
+    metrics:
+      enabled: true
+    health:
+      show-details: always
+      show-components: always
+    info:
+      enabled: true
+  info:
+    git:
+      mode: full
+info:
+  app:
+    name: practica2
+    version: 0.0.1
+    description: Demo project for Spring Boot
+
+
+
 
 feign:
   client:

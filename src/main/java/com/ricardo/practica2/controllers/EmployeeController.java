@@ -7,6 +7,7 @@ import com.ricardo.practica2.model.Employee;
 import com.ricardo.practica2.other.examples.ProductDao;
 import com.ricardo.practica2.services.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.repository.query.Param;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
